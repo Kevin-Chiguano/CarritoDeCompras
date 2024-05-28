@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="container">
+    <h1>Carrito de Compras</h1>
+    <form action="factura" method="post">
+        <input type="text" name="nombreProducto" placeholder="Nombre del Producto" required>
+        <input type="number" step="0.01" name="valorUnitario" placeholder="Valor Unitario" required>
+        <input type="number" name="cantidad" placeholder="Cantidad" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+</div>
 </body>
 </html>
